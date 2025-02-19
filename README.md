@@ -23,4 +23,5 @@
 # specific things for 1-2
 1.Pipes|: Pipes allow you to send the output of one command as the input to another command so that we can chain multiple commands together.
           eg: If you want to find out all the occurances of the word "error" in a file and count how many times it appears:
-          cat file.txt | grep "error" | wc-l
+          cat file.txt | grep "error" | wc -l
+          # greb is a tool for searching text. It looks for lines that match a specified pattern in a file or input. wc is a tool used to count the number of lines\words. -l option counts the number of lines
