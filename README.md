@@ -106,13 +106,41 @@
 
           $ sort < unsorted_file.txt  # Sorts the contents of unsorted_file.txt
 
-  # specific things for 1-3
+# specific things for 1-3
 
-  1. grep (mentioned on the previous lines)
+1. grep (mentioned on the previous lines)
 
-  2. 
+2. awk
 
+          # a important tip: Field（字段）$1\$2...field1\2....;$0 represents the whole sentence
 
+1.eg.
+
+          John Doe 30 Developer
+          
+          Jane Smith 25 Designer (content of file.txt)
+
+          bash: awk '{ print $1, $4 }' file.txt
+
+          output: John Developer
+          
+                  Jane Designer
+
+          # 可以指定不同的东西作为字段分隔符，如awk -F','就是将逗号作为字段分隔符。
+
+2.eg. （修改输出字段分隔符）
+
+          John Doe 30 Developer
+          
+          Jane Smith 25 Designer (content of file.txt)
+
+          bash: awk 'BEGIN { OFS=" - " } { print $1, $4 }' file.txt
+
+          output: John - Developer
+          
+                  Jane - Designer
+
+          
   
           
           
