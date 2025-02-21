@@ -2,7 +2,31 @@
 
 # key knowledge points about mit-missing semester
 
-# 2. Version control with Git（版本控制）
+# 2. Version control with Git（用Git版本控制）
 
   2-1. Git basics: What is\Initializing a Repository（初始储存库）\Committing Changes
+
+  2-2. Collaboration with Git: Branching and merging（分支与合并）\pull and push\practices
+
+  2-3. Git workflow: Feature branch workflow\Forking workflow（复刻）
+
+# 3. Editiors and Development Environments
+
+  3-1. Text editor and IDE
+
+  3-2. Vim
+
+  3-3. Key shortcuts
+
+
+# Specific things about 2. Version control with Git
+
+2-1: To start using Git, you first need to initialize a repository in your project directory. This can be done with the git init command:
+
+     git init
+
+     This creates a hidden .git folder in your project directory where Git will store all the information about the version history.
+
+
+
   
