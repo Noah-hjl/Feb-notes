@@ -1,0 +1,13 @@
+1. The way to make .pdf
+
+1-1：transform .jpg/.png into .pdf
+
+     brew install img2pdf (for macOS)
+
+     img2pdf input.jpg -o output.pdf
+
+1-2: combine two .pdf file in one
+
+     brew install pdftk-java
+
+     pdftk file1.pdf file2.pdf cat output merged.pdf
