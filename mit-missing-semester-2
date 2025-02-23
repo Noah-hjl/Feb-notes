@@ -27,6 +27,26 @@
 
      This creates a hidden .git folder in your project directory where Git will store all the information about the version history.
 
+2-2/3: 
+
+Cloning a Remote Repositories: Github/Gitlab
+
+     git clone https://github.com/username/project-name.git
+
+Pulling/Pushing changes:
+
+     git pull origin main  # Pull the latest changes from the remote "main" branch
+
+     git push origin main  # Push changes to the "main" branch on the remote
+
+# Specific things about 3. Editiors and Development Environments
+
+Vim (Text Editor)
+
+      
+
+
+
 
 
   
