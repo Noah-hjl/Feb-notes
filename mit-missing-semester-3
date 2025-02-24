@@ -1,3 +1,51 @@
 # Feb-notes
 
 # key knowledge points about mit-missing semester
+
+4. Automating Tasks with Make
+
+5. Debugging with GDB
+
+# specific things about 4. Automating Tasks with Make:
+
+   # Makefiles: A Makefile is a text file that defines a set of tasks to be executed. It specifies how files depend on each other and how to update them. The syntax of a Makefile allows you to define rules that describe the relationships between files and the commands to be executed when those files change.
+
+   1. three main components: Target (the file that needs to be built)、Dependencies (Files that the target depends on)、Recipe (The commands to be executed to build the target from its dependencies)
+
+   2.eg.
+
+      # Makefile Example
+
+# Define the compiler
+CC = gcc
+CFLAGS = -Wall
+
+# Target: myprogram
+# Dependencies: main.o helper.o
+# Recipe: Compile and link the program
+myprogram: main.o helper.o
+    $(CC) $(CFLAGS) main.o helper.o -o myprogram
+
+# Rule to create main.o from main.c
+main.o: main.c
+    $(CC) $(CFLAGS) -c main.c
+
+# Rule to create helper.o from helper.c
+helper.o: helper.c
+    $(CC) $(CFLAGS) -c helper.c
+
+# Clean up intermediate files
+clean:
+    rm -f *.o myprogram
+
+    3. explanations:
+
+Variables: CC is the compiler (gcc in this case), and CFLAGS contains compiler flags (-Wall enables warnings).变量：CC 是编译器（在本例中为 gcc），CFLAGS 包含编译器标志（-Wall 启用警告）。
+
+Target: myprogram is the final executable.目标： myprogram 是最终可执行文件。
+
+Dependencies: main.o and helper.o are object files that need to be created first.依赖项：main.o 和 helper.o 是需要先创建的目标文件。
+
+Recipe: The $(CC) $(CFLAGS) command is used to compile and link the object files into the executable myprogram.方法： $（CC） $（CFLAGS） 命令用于编译目标文件并将其链接到可执行的 myprogram 中。
+
+Clean Rule: The clean rule removes all object files and the executable, allowing for a fresh build.Clean Rule：清理规则会删除所有对象文件和可执行文件，从而允许进行全新构建。
