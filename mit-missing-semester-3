@@ -60,7 +60,29 @@ To clean up intermediate files, run:
 
     make clean
 
-5. Advanced Makefile Features: 
+5. Advanced Makefile Features: Pattern rules（比较复杂 建议需要使用时查找使用）
+
+Pattern rules are a way to specify how to build a target (file) based on a pattern. The general syntax is:
+
+    target_pattern: dependency_pattern
+
+    command_to_build_target
+
+eg:
+
+    %.o: %.c
+    gcc -c $< -o $@
+
+    explanation: %.o: %.c: The %.o matches any file ending in .o, and %.c matches the corresponding .c file with the same base name. The % is a wildcard that represents the base name (before the extension) of the files.%.o： %.c： %.o 
+
+    匹配任何以 .o 结尾的文件，而 %.c 匹配具有相同基本名称的相应 .c 文件。% 是一个通配符，表示文件的基本名称（在扩展名之前）。
+
+    $<: Refers to the first prerequisite (in this case, the .c file).
+    $<：指第一个先决条件（在本例中为 .c 文件）。
+    $@: Refers to the target (in this case, the .o file).
+    $@：指目标（在本例中为 .o 文件）。
+
+    
 
   
    
