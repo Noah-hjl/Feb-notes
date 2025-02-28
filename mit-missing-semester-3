@@ -82,7 +82,10 @@ eg:
     $@: Refers to the target (in this case, the .o file).
     $@：指目标（在本例中为 .o 文件）。
 
-    
+
+# specific things about 5. Debugging with GDB
+
+
 
   
    
