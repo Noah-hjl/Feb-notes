@@ -1,6 +1,6 @@
 1. The way to make .pdf
 
-1-1：transform .jpg/.png into .pdf
+1-1：transform .jpg/.png into .pdf 记得要先cd进那个图片所在的集合 比如desktop
 
      brew install img2pdf (for macOS)
 
